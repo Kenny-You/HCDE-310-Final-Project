@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{page_title}}</title>
+    </head>
+    <body style= "font-family: Poppins, sans-serif;">
+        <h1 style= "text-align: center; font-size: 3.5rem;">Here's our calculated suggestion!</h1>
+        <div class="drink_name" style= "display: flex; justify-content: center; font-size: 1.75rem;">{{drink_name}}</div>
+        <div class="thumb" style= "display: flex; justify-content: center;">
+            <img src="{{drink_img}}" alt= "cocktail_img" style= "height: 300px; width: 300px; border-radius: 15%;">
+        </div>
+        <h4 style= "text-align: center;">Look good? Click on the Drink ID below to learn more!</h4>
+        <h4 style= "text-align: center; font-size: 1.5rem;">&#128071;</h4>
+        <form action="cocktaildetails" method= "get">
+            <div class="box" style= "display: flex; justify-content: space-around; list-style-type: none;">
+                <input type= "submit" name= "details" value= {{drink_id}} id= "details" style= "height: 4.5rem; width: 15rem; font-size: 30px; font-family: Poppins, sans-serif; margin-bottom: 2%"/>
+            </div>
+        </form>
+        <!--<div class="drink_id" style= "display: flex; justify-content: center; font-size: 2rem;">{{drink_id}}</div>-->
+        <div class="btndiv" style= "font-size: 1.75rem; display: flex; justify-content: space-around; list-style-type: none;">
+            <form action="start" method="get">
+                <input type= "submit" name= "restart" value= "&#128694; back to the beginning" id= "restart" style= "height: 40px; font-family: Poppins, sans-serif;"/>
+            </form>
+            <button onClick="window.location.reload();" style= "font-family: Poppins, sans-serif; height: 40px;">Try a different drink</button>
+        </div>
+    </body>
+</html>
